@@ -1,0 +1,48 @@
+---
+title: "Dewright"
+output: html_document
+---
+
+```{r}
+install.packages("lpSolveAPI")
+
+```
+Number ### 1
+y1 = 6x1 + 4x2 + 5x3 - 50
+y2 = 8x1 + 7x2 + 5x3 - 75
+
+
+P = 20x1 + 15x2 + 25x3
+
+
+Number ### 2
+Management Objective Function in terms of x and y
+
+maximize: 12x1 + 9x2 + 15x3 - 6 y1p - 6 y1m - 3 y2m;
+
+```{r}
+library(lpSolveAPI)
+gp <- read.lp("EmaxCorp.lp")
+
+```
+
+
+```{r}
+solve(gp)
+get.objective(gp)
+get.variables(gp)
+```
+Number ### 3
+
+Findings
+
+Optimal solution is Z = 125
+
+Variable values (appear in order of formulation) are:
+x1 = 0
+x2 = 8.33
+x3 = 3.33
+y1p = 0
+y1m = 0
+y2m = 0
+y2p = 0
