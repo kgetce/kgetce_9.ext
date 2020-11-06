@@ -1,6 +1,6 @@
 
 // Objective function
-maximize: 12x1 + 9x2 + 15x3 - 6 y1p - 6 y1m - 3 y2m;
+maximize Z: 12x1 + 9x2 + 15x3 - 6 y1p - 6 y1m - 3 y2m;
 
 // Constraints
 6x1 + 4x2 + 5x3 + y1m - y1p = 50;
